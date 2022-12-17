@@ -1,0 +1,1669 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "joke",
+          "type": "string"
+        }
+      ],
+      "name": "NewJoke",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "getAllJokes",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "joker",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "joke",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Jokes.Joke[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTotalJokes",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_joke",
+          "type": "string"
+        }
+      ],
+      "name": "newJoke",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalJokes",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50610733806100206000396000f3fe6080604052600436106100435760003560e01c806349b7a1161461004f578063696ff25c146100645780639e599c041461008f578063ebdd3748146100ae57600080fd5b3661004a57005b600080fd5b61006261005d3660046103ea565b6100c4565b005b34801561007057600080fd5b506100796102c3565b60405161008691906104e1565b60405180910390f35b34801561009b57600080fd5b506000545b604051908152602001610086565b3480156100ba57600080fd5b506100a060005481565b60016000808282546100d6919061056d565b90915550506040805160608101825233815260208101838152429282019290925260018054808201825560009190915281517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6600390920291820180546001600160a01b0319166001600160a01b0390921691909117815592519192917fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf790910190610182908261061c565b506040918201516002909101555133907f8bd8a26db58e8d8c2f520500e46ebd47a1c9baa42722d81ed6c583635d21298e906101c190429085906106dc565b60405180910390a2662386f26fc10000478111156102265760405162461bcd60e51b815260206004820152601d60248201527f4f7574206f662065746865722c2074727920616761696e206c6174657200000060448201526064015b60405180910390fd5b604051600090339083908381818185875af1925050503d8060008114610268576040519150601f19603f3d011682016040523d82523d6000602084013e61026d565b606091505b50509050806102be5760405162461bcd60e51b815260206004820152601860248201527f4661696c656420746f2070617920746865206a6f6b6572210000000000000000604482015260640161021d565b505050565b60606001805480602002602001604051908101604052809291908181526020016000905b828210156103cb57600084815260209081902060408051606081019091526003850290910180546001600160a01b03168252600181018054929391929184019161033090610594565b80601f016020809104026020016040519081016040528092919081815260200182805461035c90610594565b80156103a95780601f1061037e576101008083540402835291602001916103a9565b820191906000526020600020905b81548152906001019060200180831161038c57829003601f168201915b50505050508152602001600282015481525050815260200190600101906102e7565b50505050905090565b634e487b7160e01b600052604160045260246000fd5b6000602082840312156103fc57600080fd5b813567ffffffffffffffff8082111561041457600080fd5b818401915084601f83011261042857600080fd5b81358181111561043a5761043a6103d4565b604051601f8201601f19908116603f01168101908382118183101715610462576104626103d4565b8160405282815287602084870101111561047b57600080fd5b826020860160208301376000928101602001929092525095945050505050565b6000815180845260005b818110156104c1576020818501810151868301820152016104a5565b506000602082860101526020601f19601f83011685010191505092915050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b8381101561055f57888303603f19018552815180516001600160a01b03168452878101516060898601819052906105418287018261049b565b92890151958901959095525094870194925090860190600101610508565b509098975050505050505050565b8082018082111561058e57634e487b7160e01b600052601160045260246000fd5b92915050565b600181811c908216806105a857607f821691505b6020821081036105c857634e487b7160e01b600052602260045260246000fd5b50919050565b601f8211156102be57600081815260208120601f850160051c810160208610156105f55750805b601f850160051c820191505b8181101561061457828155600101610601565b505050505050565b815167ffffffffffffffff811115610636576106366103d4565b61064a816106448454610594565b846105ce565b602080601f83116001811461067f57600084156106675750858301515b600019600386901b1c1916600185901b178555610614565b600085815260208120601f198616915b828110156106ae5788860151825594840194600190910190840161068f565b50858210156106cc5787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b8281526040602082015260006106f5604083018461049b565b94935050505056fea26469706673582212204ef9fa8861db44c0d6fc1db6567c2a828c66c2c44080891bca0ca0527d7cd0bc64736f6c63430008110033",
+    "sourceMap": "65:1425:14:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080604052600436106100435760003560e01c806349b7a1161461004f578063696ff25c146100645780639e599c041461008f578063ebdd3748146100ae57600080fd5b3661004a57005b600080fd5b61006261005d3660046103ea565b6100c4565b005b34801561007057600080fd5b506100796102c3565b60405161008691906104e1565b60405180910390f35b34801561009b57600080fd5b506000545b604051908152602001610086565b3480156100ba57600080fd5b506100a060005481565b60016000808282546100d6919061056d565b90915550506040805160608101825233815260208101838152429282019290925260018054808201825560009190915281517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6600390920291820180546001600160a01b0319166001600160a01b0390921691909117815592519192917fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf790910190610182908261061c565b506040918201516002909101555133907f8bd8a26db58e8d8c2f520500e46ebd47a1c9baa42722d81ed6c583635d21298e906101c190429085906106dc565b60405180910390a2662386f26fc10000478111156102265760405162461bcd60e51b815260206004820152601d60248201527f4f7574206f662065746865722c2074727920616761696e206c6174657200000060448201526064015b60405180910390fd5b604051600090339083908381818185875af1925050503d8060008114610268576040519150601f19603f3d011682016040523d82523d6000602084013e61026d565b606091505b50509050806102be5760405162461bcd60e51b815260206004820152601860248201527f4661696c656420746f2070617920746865206a6f6b6572210000000000000000604482015260640161021d565b505050565b60606001805480602002602001604051908101604052809291908181526020016000905b828210156103cb57600084815260209081902060408051606081019091526003850290910180546001600160a01b03168252600181018054929391929184019161033090610594565b80601f016020809104026020016040519081016040528092919081815260200182805461035c90610594565b80156103a95780601f1061037e576101008083540402835291602001916103a9565b820191906000526020600020905b81548152906001019060200180831161038c57829003601f168201915b50505050508152602001600282015481525050815260200190600101906102e7565b50505050905090565b634e487b7160e01b600052604160045260246000fd5b6000602082840312156103fc57600080fd5b813567ffffffffffffffff8082111561041457600080fd5b818401915084601f83011261042857600080fd5b81358181111561043a5761043a6103d4565b604051601f8201601f19908116603f01168101908382118183101715610462576104626103d4565b8160405282815287602084870101111561047b57600080fd5b826020860160208301376000928101602001929092525095945050505050565b6000815180845260005b818110156104c1576020818501810151868301820152016104a5565b506000602082860101526020601f19601f83011685010191505092915050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b8381101561055f57888303603f19018552815180516001600160a01b03168452878101516060898601819052906105418287018261049b565b92890151958901959095525094870194925090860190600101610508565b509098975050505050505050565b8082018082111561058e57634e487b7160e01b600052601160045260246000fd5b92915050565b600181811c908216806105a857607f821691505b6020821081036105c857634e487b7160e01b600052602260045260246000fd5b50919050565b601f8211156102be57600081815260208120601f850160051c810160208610156105f55750805b601f850160051c820191505b8181101561061457828155600101610601565b505050505050565b815167ffffffffffffffff811115610636576106366103d4565b61064a816106448454610594565b846105ce565b602080601f83116001811461067f57600084156106675750858301515b600019600386901b1c1916600185901b178555610614565b600085815260208120601f198616915b828110156106ae5788860151825594840194600190910190840161068f565b50858210156106cc5787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b8281526040602082015260006106f5604083018461049b565b94935050505056fea26469706673582212204ef9fa8861db44c0d6fc1db6567c2a828c66c2c44080891bca0ca0527d7cd0bc64736f6c63430008110033",
+    "sourceMap": "65:1425:14:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;468:715;;;;;;:::i;:::-;;:::i;:::-;;1243:91;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1399:89;;;;;;;;;;-1:-1:-1;1445:7:14;1471:10;1399:89;;;2817:25:16;;;2805:2;2790:18;1399:89:14;2671:177:16;86:25:14;;;;;;;;;;;;;;;;468:715;620:1;606:10;;:15;;;;;;;:::i;:::-;;;;-1:-1:-1;;703:40:14;;;;;;;;708:10;703:40;;;;;;;;727:15;703:40;;;;;;;689:8;:55;;;;;;;-1:-1:-1;689:55:14;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;689:55:14;-1:-1:-1;;;;;689:55:14;;;;;;;;;;;703:40;;689:55;;;;;;;;;;:::i;:::-;-1:-1:-1;689:55:14;;;;;;;;;;802:43;810:10;;802:43;;;;822:15;;839:5;;802:43;:::i;:::-;;;;;;;;920:10;976:21;961:36;;;940:112;;;;-1:-1:-1;;;940:112:14;;6167:2:16;940:112:14;;;6149:21:16;6206:2;6186:18;;;6179:30;6245:31;6225:18;;;6218:59;6294:18;;940:112:14;;;;;;;;;1081:41;;1063:12;;1082:10;;1106:11;;1063:12;1081:41;1063:12;1081:41;1106:11;1082:10;1081:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1062:60;;;1140:7;1132:44;;;;-1:-1:-1;;;1132:44:14;;6735:2:16;1132:44:14;;;6717:21:16;6774:2;6754:18;;;6747:30;6813:26;6793:18;;;6786:54;6857:18;;1132:44:14;6533:348:16;1132:44:14;521:662;;468:715;:::o;1243:91::-;1287:13;1319:8;1312:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;1312:15:14;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1243:91;:::o;14:127:16:-;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:922;215:6;268:2;256:9;247:7;243:23;239:32;236:52;;;284:1;281;274:12;236:52;324:9;311:23;353:18;394:2;386:6;383:14;380:34;;;410:1;407;400:12;380:34;448:6;437:9;433:22;423:32;;493:7;486:4;482:2;478:13;474:27;464:55;;515:1;512;505:12;464:55;551:2;538:16;573:2;569;566:10;563:36;;;579:18;;:::i;:::-;654:2;648:9;622:2;708:13;;-1:-1:-1;;704:22:16;;;728:2;700:31;696:40;684:53;;;752:18;;;772:22;;;749:46;746:72;;;798:18;;:::i;:::-;838:10;834:2;827:22;873:2;865:6;858:18;913:7;908:2;903;899;895:11;891:20;888:33;885:53;;;934:1;931;924:12;885:53;990:2;985;981;977:11;972:2;964:6;960:15;947:46;1035:1;1013:15;;;1030:2;1009:24;1002:35;;;;-1:-1:-1;1017:6:16;146:922;-1:-1:-1;;;;;146:922:16:o;1073:423::-;1115:3;1153:5;1147:12;1180:6;1175:3;1168:19;1205:1;1215:162;1229:6;1226:1;1223:13;1215:162;;;1291:4;1347:13;;;1343:22;;1337:29;1319:11;;;1315:20;;1308:59;1244:12;1215:162;;;1219:3;1422:1;1415:4;1406:6;1401:3;1397:16;1393:27;1386:38;1485:4;1478:2;1474:7;1469:2;1461:6;1457:15;1453:29;1448:3;1444:39;1440:50;1433:57;;;1073:423;;;;:::o;1501:1165::-;1689:4;1718:2;1758;1747:9;1743:18;1788:2;1777:9;1770:21;1811:6;1846;1840:13;1877:6;1869;1862:22;1903:2;1893:12;;1936:2;1925:9;1921:18;1914:25;;1998:2;1988:6;1985:1;1981:14;1970:9;1966:30;1962:39;2036:2;2028:6;2024:15;2057:1;2067:570;2081:6;2078:1;2075:13;2067:570;;;2146:22;;;-1:-1:-1;;2142:36:16;2130:49;;2202:13;;2274:9;;-1:-1:-1;;;;;2270:35:16;2255:51;;2345:11;;;2339:18;2238:4;2377:15;;;2370:27;;;2238:4;2424:48;2456:15;;;2339:18;2424:48;:::i;:::-;2515:11;;;2509:18;2492:15;;;2485:43;;;;-1:-1:-1;2615:12:16;;;;2410:62;-1:-1:-1;2580:15:16;;;;2103:1;2096:9;2067:570;;;-1:-1:-1;2654:6:16;;1501:1165;-1:-1:-1;;;;;;;;1501:1165:16:o;2853:222::-;2918:9;;;2939:10;;;2936:133;;;2991:10;2986:3;2982:20;2979:1;2972:31;3026:4;3023:1;3016:15;3054:4;3051:1;3044:15;2936:133;2853:222;;;;:::o;3080:380::-;3159:1;3155:12;;;;3202;;;3223:61;;3277:4;3269:6;3265:17;3255:27;;3223:61;3330:2;3322:6;3319:14;3299:18;3296:38;3293:161;;3376:10;3371:3;3367:20;3364:1;3357:31;3411:4;3408:1;3401:15;3439:4;3436:1;3429:15;3293:161;;3080:380;;;:::o;3591:545::-;3693:2;3688:3;3685:11;3682:448;;;3729:1;3754:5;3750:2;3743:17;3799:4;3795:2;3785:19;3869:2;3857:10;3853:19;3850:1;3846:27;3840:4;3836:38;3905:4;3893:10;3890:20;3887:47;;;-1:-1:-1;3928:4:16;3887:47;3983:2;3978:3;3974:12;3971:1;3967:20;3961:4;3957:31;3947:41;;4038:82;4056:2;4049:5;4046:13;4038:82;;;4101:17;;;4082:1;4071:13;4038:82;;;4042:3;;;3591:545;;;:::o;4312:1352::-;4438:3;4432:10;4465:18;4457:6;4454:30;4451:56;;;4487:18;;:::i;:::-;4516:97;4606:6;4566:38;4598:4;4592:11;4566:38;:::i;:::-;4560:4;4516:97;:::i;:::-;4668:4;;4732:2;4721:14;;4749:1;4744:663;;;;5451:1;5468:6;5465:89;;;-1:-1:-1;5520:19:16;;;5514:26;5465:89;-1:-1:-1;;4269:1:16;4265:11;;;4261:24;4257:29;4247:40;4293:1;4289:11;;;4244:57;5567:81;;4714:944;;4744:663;3538:1;3531:14;;;3575:4;3562:18;;-1:-1:-1;;4780:20:16;;;4898:236;4912:7;4909:1;4906:14;4898:236;;;5001:19;;;4995:26;4980:42;;5093:27;;;;5061:1;5049:14;;;;4928:19;;4898:236;;;4902:3;5162:6;5153:7;5150:19;5147:201;;;5223:19;;;5217:26;-1:-1:-1;;5306:1:16;5302:14;;;5318:3;5298:24;5294:37;5290:42;5275:58;5260:74;;5147:201;-1:-1:-1;;;;;5394:1:16;5378:14;;;5374:22;5361:36;;-1:-1:-1;4312:1352:16:o;5669:291::-;5846:6;5835:9;5828:25;5889:2;5884;5873:9;5869:18;5862:30;5809:4;5909:45;5950:2;5939:9;5935:18;5927:6;5909:45;:::i;:::-;5901:53;5669:291;-1:-1:-1;;;;5669:291:16:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getAllJokes()": "696ff25c",
+    "getTotalJokes()": "9e599c04",
+    "newJoke(string)": "49b7a116",
+    "totalJokes()": "ebdd3748"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"joke\",\"type\":\"string\"}],\"name\":\"NewJoke\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"getAllJokes\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"joker\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"joke\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"internalType\":\"struct Jokes.Joke[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalJokes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_joke\",\"type\":\"string\"}],\"name\":\"newJoke\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalJokes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Jokes.sol\":\"Jokes\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/Jokes.sol\":{\"keccak256\":\"0x2db596b2f686382abeefd507641f8c55cacad673121c9b9f769ea9adf0985f65\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://627779375fb450c397b97d24718d34ed6fc1d35e34ff21c5f3bd165e3adcf1ee\",\"dweb:/ipfs/QmfR14VgXXfV76E8aXmKhT77t7rRJNk2C3cisfknfQ1X5i\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "string",
+              "name": "joke",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "NewJoke",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAllJokes",
+          "outputs": [
+            {
+              "internalType": "struct Jokes.Joke[]",
+              "name": "",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "joker",
+                  "type": "address"
+                },
+                {
+                  "internalType": "string",
+                  "name": "joke",
+                  "type": "string"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "timestamp",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getTotalJokes",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "_joke",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "newJoke"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "totalJokes",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "payable",
+          "type": "receive"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/Jokes.sol": "Jokes"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/Jokes.sol": {
+        "keccak256": "0x2db596b2f686382abeefd507641f8c55cacad673121c9b9f769ea9adf0985f65",
+        "urls": [
+          "bzz-raw://627779375fb450c397b97d24718d34ed6fc1d35e34ff21c5f3bd165e3adcf1ee",
+          "dweb:/ipfs/QmfR14VgXXfV76E8aXmKhT77t7rRJNk2C3cisfknfQ1X5i"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/Jokes.sol",
+    "id": 24767,
+    "exportedSymbols": {
+      "Jokes": [
+        24766
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:1452:14",
+    "nodes": [
+      {
+        "id": 24661,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:14",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 24766,
+        "nodeType": "ContractDefinition",
+        "src": "65:1425:14",
+        "nodes": [
+          {
+            "id": 24663,
+            "nodeType": "VariableDeclaration",
+            "src": "86:25:14",
+            "nodes": [],
+            "constant": false,
+            "functionSelector": "ebdd3748",
+            "mutability": "mutable",
+            "name": "totalJokes",
+            "nameLocation": "101:10:14",
+            "scope": 24766,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 24662,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "86:7:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 24671,
+            "nodeType": "EventDefinition",
+            "src": "175:68:14",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "8bd8a26db58e8d8c2f520500e46ebd47a1c9baa42722d81ed6c583635d21298e",
+            "name": "NewJoke",
+            "nameLocation": "181:7:14",
+            "parameters": {
+              "id": 24670,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24665,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "205:4:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 24671,
+                  "src": "189:20:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 24664,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "189:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 24667,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "timestamp",
+                  "nameLocation": "219:9:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 24671,
+                  "src": "211:17:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 24666,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "211:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 24669,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "joke",
+                  "nameLocation": "237:4:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 24671,
+                  "src": "230:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 24668,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "188:54:14"
+            }
+          },
+          {
+            "id": 24678,
+            "nodeType": "StructDefinition",
+            "src": "286:90:14",
+            "nodes": [],
+            "canonicalName": "Jokes.Joke",
+            "members": [
+              {
+                "constant": false,
+                "id": 24673,
+                "mutability": "mutable",
+                "name": "joker",
+                "nameLocation": "316:5:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 24678,
+                "src": "308:13:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 24672,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "308:7:14",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 24675,
+                "mutability": "mutable",
+                "name": "joke",
+                "nameLocation": "338:4:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 24678,
+                "src": "331:11:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 24674,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "331:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 24677,
+                "mutability": "mutable",
+                "name": "timestamp",
+                "nameLocation": "360:9:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 24678,
+                "src": "352:17:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 24676,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "352:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Joke",
+            "nameLocation": "293:4:14",
+            "scope": 24766,
+            "visibility": "public"
+          },
+          {
+            "id": 24682,
+            "nodeType": "VariableDeclaration",
+            "src": "411:15:14",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "allJokes",
+            "nameLocation": "418:8:14",
+            "scope": 24766,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Joke_$24678_storage_$dyn_storage",
+              "typeString": "struct Jokes.Joke[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 24680,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 24679,
+                  "name": "Joke",
+                  "nameLocations": [
+                    "411:4:14"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 24678,
+                  "src": "411:4:14"
+                },
+                "referencedDeclaration": 24678,
+                "src": "411:4:14",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Joke_$24678_storage_ptr",
+                  "typeString": "struct Jokes.Joke"
+                }
+              },
+              "id": 24681,
+              "nodeType": "ArrayTypeName",
+              "src": "411:6:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Joke_$24678_storage_$dyn_storage_ptr",
+                "typeString": "struct Jokes.Joke[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 24686,
+            "nodeType": "FunctionDefinition",
+            "src": "433:29:14",
+            "nodes": [],
+            "body": {
+              "id": 24685,
+              "nodeType": "Block",
+              "src": "460:2:14",
+              "nodes": [],
+              "statements": []
+            },
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 24683,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "440:2:14"
+            },
+            "returnParameters": {
+              "id": 24684,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "460:0:14"
+            },
+            "scope": 24766,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 24747,
+            "nodeType": "FunctionDefinition",
+            "src": "468:715:14",
+            "nodes": [],
+            "body": {
+              "id": 24746,
+              "nodeType": "Block",
+              "src": "521:662:14",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 24693,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 24691,
+                      "name": "totalJokes",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 24663,
+                      "src": "606:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "hexValue": "31",
+                      "id": 24692,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "620:1:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "606:15:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 24694,
+                  "nodeType": "ExpressionStatement",
+                  "src": "606:15:14"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "expression": {
+                              "id": 24699,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -15,
+                              "src": "708:3:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 24700,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "712:6:14",
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "src": "708:10:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          {
+                            "id": 24701,
+                            "name": "_joke",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 24688,
+                            "src": "720:5:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 24702,
+                              "name": "block",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -4,
+                              "src": "727:5:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_block",
+                                "typeString": "block"
+                              }
+                            },
+                            "id": 24703,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "733:9:14",
+                            "memberName": "timestamp",
+                            "nodeType": "MemberAccess",
+                            "src": "727:15:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 24698,
+                          "name": "Joke",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 24678,
+                          "src": "703:4:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Joke_$24678_storage_ptr_$",
+                            "typeString": "type(struct Jokes.Joke storage pointer)"
+                          }
+                        },
+                        "id": 24704,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "703:40:14",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Joke_$24678_memory_ptr",
+                          "typeString": "struct Jokes.Joke memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Joke_$24678_memory_ptr",
+                          "typeString": "struct Jokes.Joke memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 24695,
+                        "name": "allJokes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24682,
+                        "src": "689:8:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Joke_$24678_storage_$dyn_storage",
+                          "typeString": "struct Jokes.Joke storage ref[] storage ref"
+                        }
+                      },
+                      "id": 24697,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "698:4:14",
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "689:13:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Joke_$24678_storage_$dyn_storage_ptr_$_t_struct$_Joke_$24678_storage_$returns$__$bound_to$_t_array$_t_struct$_Joke_$24678_storage_$dyn_storage_ptr_$",
+                        "typeString": "function (struct Jokes.Joke storage ref[] storage pointer,struct Jokes.Joke storage ref)"
+                      }
+                    },
+                    "id": 24705,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "689:55:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 24706,
+                  "nodeType": "ExpressionStatement",
+                  "src": "689:55:14"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 24708,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "810:3:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 24709,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "814:6:14",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "810:10:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 24710,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -4,
+                          "src": "822:5:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 24711,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "828:9:14",
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "src": "822:15:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 24712,
+                        "name": "_joke",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24688,
+                        "src": "839:5:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 24707,
+                      "name": "NewJoke",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 24671,
+                      "src": "802:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (address,uint256,string memory)"
+                      }
+                    },
+                    "id": 24713,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "802:43:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 24714,
+                  "nodeType": "EmitStatement",
+                  "src": "797:48:14"
+                },
+                {
+                  "assignments": [
+                    24716
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 24716,
+                      "mutability": "mutable",
+                      "name": "prizeAmount",
+                      "nameLocation": "906:11:14",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 24746,
+                      "src": "898:19:14",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 24715,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "898:7:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 24718,
+                  "initialValue": {
+                    "hexValue": "302e3031",
+                    "id": 24717,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "920:10:14",
+                    "subdenomination": "ether",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_10000000000000000_by_1",
+                      "typeString": "int_const 10000000000000000"
+                    },
+                    "value": "0.01"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "898:32:14"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 24726,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 24720,
+                          "name": "prizeAmount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 24716,
+                          "src": "961:11:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "<=",
+                        "rightExpression": {
+                          "expression": {
+                            "arguments": [
+                              {
+                                "id": 24723,
+                                "name": "this",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -28,
+                                "src": "984:4:14",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_Jokes_$24766",
+                                  "typeString": "contract Jokes"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_contract$_Jokes_$24766",
+                                  "typeString": "contract Jokes"
+                                }
+                              ],
+                              "id": 24722,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "976:7:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 24721,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "976:7:14",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 24724,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "976:13:14",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "id": 24725,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "990:7:14",
+                          "memberName": "balance",
+                          "nodeType": "MemberAccess",
+                          "src": "976:21:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "961:36:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "4f7574206f662065746865722c2074727920616761696e206c61746572",
+                        "id": 24727,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1011:31:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_ade6fb5f3905d2073f533b39b9891586cb92b7982e02051dfc8426af06af593c",
+                          "typeString": "literal_string \"Out of ether, try again later\""
+                        },
+                        "value": "Out of ether, try again later"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_ade6fb5f3905d2073f533b39b9891586cb92b7982e02051dfc8426af06af593c",
+                          "typeString": "literal_string \"Out of ether, try again later\""
+                        }
+                      ],
+                      "id": 24719,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "940:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 24728,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "940:112:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 24729,
+                  "nodeType": "ExpressionStatement",
+                  "src": "940:112:14"
+                },
+                {
+                  "assignments": [
+                    24731,
+                    null
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 24731,
+                      "mutability": "mutable",
+                      "name": "success",
+                      "nameLocation": "1068:7:14",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 24746,
+                      "src": "1063:12:14",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 24730,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1063:4:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    null
+                  ],
+                  "id": 24740,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "hexValue": "",
+                        "id": 24738,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1119:2:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                          "typeString": "literal_string \"\""
+                        },
+                        "value": ""
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                          "typeString": "literal_string \"\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                            "typeString": "literal_string \"\""
+                          }
+                        ],
+                        "expression": {
+                          "components": [
+                            {
+                              "expression": {
+                                "id": 24732,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -15,
+                                "src": "1082:3:14",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 24733,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "1086:6:14",
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "src": "1082:10:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "id": 24734,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "1081:12:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 24735,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1094:4:14",
+                        "memberName": "call",
+                        "nodeType": "MemberAccess",
+                        "src": "1081:17:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
+                          "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
+                        }
+                      },
+                      "id": 24737,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "names": [
+                        "value"
+                      ],
+                      "nodeType": "FunctionCallOptions",
+                      "options": [
+                        {
+                          "id": 24736,
+                          "name": "prizeAmount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 24716,
+                          "src": "1106:11:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "src": "1081:37:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$value",
+                        "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
+                      }
+                    },
+                    "id": 24739,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1081:41:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(bool,bytes memory)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1062:60:14"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 24742,
+                        "name": "success",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24731,
+                        "src": "1140:7:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "4661696c656420746f2070617920746865206a6f6b657221",
+                        "id": 24743,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1149:26:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_d30924381c7cd29198766753f8faf00ff8380b273f750f8d6963ecd1c7861e5c",
+                          "typeString": "literal_string \"Failed to pay the joker!\""
+                        },
+                        "value": "Failed to pay the joker!"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_d30924381c7cd29198766753f8faf00ff8380b273f750f8d6963ecd1c7861e5c",
+                          "typeString": "literal_string \"Failed to pay the joker!\""
+                        }
+                      ],
+                      "id": 24741,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1132:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 24744,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1132:44:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 24745,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1132:44:14"
+                }
+              ]
+            },
+            "functionSelector": "49b7a116",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "newJoke",
+            "nameLocation": "477:7:14",
+            "parameters": {
+              "id": 24689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24688,
+                  "mutability": "mutable",
+                  "name": "_joke",
+                  "nameLocation": "499:5:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 24747,
+                  "src": "485:19:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 24687,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "485:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "484:21:14"
+            },
+            "returnParameters": {
+              "id": 24690,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "521:0:14"
+            },
+            "scope": 24766,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 24757,
+            "nodeType": "FunctionDefinition",
+            "src": "1243:91:14",
+            "nodes": [],
+            "body": {
+              "id": 24756,
+              "nodeType": "Block",
+              "src": "1302:32:14",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 24754,
+                    "name": "allJokes",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 24682,
+                    "src": "1319:8:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Joke_$24678_storage_$dyn_storage",
+                      "typeString": "struct Jokes.Joke storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 24753,
+                  "id": 24755,
+                  "nodeType": "Return",
+                  "src": "1312:15:14"
+                }
+              ]
+            },
+            "functionSelector": "696ff25c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllJokes",
+            "nameLocation": "1252:11:14",
+            "parameters": {
+              "id": 24748,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1263:2:14"
+            },
+            "returnParameters": {
+              "id": 24753,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24752,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 24757,
+                  "src": "1287:13:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Joke_$24678_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Jokes.Joke[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 24750,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 24749,
+                        "name": "Joke",
+                        "nameLocations": [
+                          "1287:4:14"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 24678,
+                        "src": "1287:4:14"
+                      },
+                      "referencedDeclaration": 24678,
+                      "src": "1287:4:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Joke_$24678_storage_ptr",
+                        "typeString": "struct Jokes.Joke"
+                      }
+                    },
+                    "id": 24751,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1287:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Joke_$24678_storage_$dyn_storage_ptr",
+                      "typeString": "struct Jokes.Joke[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1286:15:14"
+            },
+            "scope": 24766,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 24765,
+            "nodeType": "FunctionDefinition",
+            "src": "1399:89:14",
+            "nodes": [],
+            "body": {
+              "id": 24764,
+              "nodeType": "Block",
+              "src": "1454:34:14",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 24762,
+                    "name": "totalJokes",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 24663,
+                    "src": "1471:10:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 24761,
+                  "id": 24763,
+                  "nodeType": "Return",
+                  "src": "1464:17:14"
+                }
+              ]
+            },
+            "functionSelector": "9e599c04",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTotalJokes",
+            "nameLocation": "1408:13:14",
+            "parameters": {
+              "id": 24758,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1421:2:14"
+            },
+            "returnParameters": {
+              "id": 24761,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24760,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 24765,
+                  "src": "1445:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 24759,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1445:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1444:9:14"
+            },
+            "scope": 24766,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Jokes",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          24766
+        ],
+        "name": "Jokes",
+        "nameLocation": "74:5:14",
+        "scope": 24767,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 14
+}
