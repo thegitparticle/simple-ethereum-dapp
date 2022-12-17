@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	useAccount,
 	useConnect,
@@ -10,6 +10,14 @@ import { ConnectKitButton } from "connectkit";
 import Jokes from "../utils/Jokes.json";
 
 export default function Home() {
+	const [jokeTyped, setJokeTyped] = useState<string>("");
+
+	const updateJokeTyped = (event: {
+		target: { value: React.SetStateAction<string> };
+	}) => {
+		setJokeTyped(event.target.value);
+	};
+
 	const contractABI = Jokes.abi;
 
 	const { address } = useAccount();
@@ -44,14 +52,14 @@ export default function Home() {
 		}
 	}
 
-	const jokeString: string =
-		"Superman once went to a party. Some people wore bitcoin suits, other dogecoin. Superman was upset, no one told him it was a crypto night.";
+	// const jokeString: string =
+	// 	"Superman once went to a party. Some people wore bitcoin suits, other dogecoin. Superman was upset, no one told him it was a crypto night.";
 
 	const { config, error } = usePrepareContractWrite({
 		address: "0x22d52a1cd58e6ec803ca9B942d70Cd8Db44f08Aa",
 		abi: contractABI,
 		functionName: "newJoke",
-		args: [jokeString],
+		args: [jokeTyped],
 		chainId: 5,
 	});
 
@@ -65,6 +73,15 @@ export default function Home() {
 			<p className="text-off_light font-display text-xs my-12">
 				{address}
 			</p>
+			<input
+				type="text"
+				id="joke"
+				name="new joke to be typed here"
+				minLength={3}
+				maxLength={100}
+				onChange={updateJokeTyped}
+				className="flex h-10 w-full bg-gray-800/25 text-md text-gray-500 font-body font-bold text-center rounded-xl"
+			/>
 			<button
 				// disabled={!write}
 				onClick={() => write?.()}
