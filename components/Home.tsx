@@ -9,16 +9,20 @@ import { ConnectKitButton } from "connectkit";
 import Jokes from "../utils/Jokes.json";
 
 export default function Home() {
-	const contractAddress = "0xE36bC68Eeb08719536e9D39D32775335Fe158e13";
 	const contractABI = Jokes.abi;
 
 	const { address } = useAccount();
+
+	const jokesContractConfig = {
+		address: "0x22d52a1cd58e6ec803ca9B942d70Cd8Db44f08Aa",
+		abi: contractABI,
+	};
 
 	const jokeString: string =
 		"Superman once went to a party. Some people wore bitcoin suits, other dogecoin. Superman was upset, no one told him it was a crypto night.";
 
 	const { config, error } = usePrepareContractWrite({
-		address: "0xecb504d39723b0be0e3a9aa33d646642d1051ee1",
+		address: "0x22d52a1cd58e6ec803ca9B942d70Cd8Db44f08Aa",
 		abi: contractABI,
 		functionName: "newJoke",
 		args: [jokeString],
