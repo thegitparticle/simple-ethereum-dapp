@@ -21,7 +21,7 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className={styles.main}>
+			<main className="flex-col justify-center items-center flex-1 flex bg-dark">
 				<Main />
 			</main>
 			<div className="flex w-full justify-center items-center bg-dark snap-end border-t-2 border-light/25">
