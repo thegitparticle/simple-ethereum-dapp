@@ -52,9 +52,6 @@ export default function Home() {
 		}
 	}
 
-	// const jokeString: string =
-	// 	"Superman once went to a party. Some people wore bitcoin suits, other dogecoin. Superman was upset, no one told him it was a crypto night.";
-
 	const { config, error } = usePrepareContractWrite({
 		address: "0x22d52a1cd58e6ec803ca9B942d70Cd8Db44f08Aa",
 		abi: contractABI,
@@ -80,7 +77,7 @@ export default function Home() {
 				minLength={3}
 				maxLength={100}
 				onChange={updateJokeTyped}
-				className="flex h-10 w-full bg-gray-800/25 text-md text-gray-500 font-body font-bold text-center rounded-xl"
+				className="flex h-10 w-3/5 bg-gray-800/25 text-md text-gray-500 font-body font-bold text-center rounded-xl"
 			/>
 			<button
 				// disabled={!write}
