@@ -64,7 +64,7 @@ export default function Home() {
 
 	return (
 		<div className="flex w-full h-screen flex-col justify-center items-center">
-			<p className="text-off_light font-display text-xs my-12">
+			<p className="text-off_light font-display text-lg mt-12 mb-2">
 				Home - Simple Ethereum Dapp
 			</p>
 			<p className="text-off_light font-display text-xs my-12">
