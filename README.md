@@ -1,4 +1,4 @@
-### Simple Series
+# 🤚Simple Series
 
 The Simple Series aims to maintain repos of the simplest way to build various frontends that interact with smart contracts. You can find more from this series at the end of this page.
 
@@ -21,6 +21,6 @@ You can also run the code on your own.
 
 All kinds of contributions from upgrading the code, libraries, readme, add new features, etc. are welcome.
 
-#### More from the Simple Series
+#### More from the 🤚Simple Series
 
 1. [Simple Ethereum Contract](https://github.com/thegitparticle/simple-ethereum-contract)
