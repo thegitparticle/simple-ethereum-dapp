@@ -36,7 +36,10 @@ export default function Home() {
 				<div className="flex justify-center items-center flex-col">
 					{jokesArray.map((joke, index) => {
 						return (
-							<p className="flex text-off_light my-2" key={index}>
+							<p
+								className="flex text-off_light my-2 font-body"
+								key={index}
+							>
 								{joke.joke}
 							</p>
 						);
@@ -46,7 +49,9 @@ export default function Home() {
 		} else {
 			return (
 				<div className="flex justify-center items-center flex-col">
-					<p className="flex text-off_light my-2">no jokes yet</p>
+					<p className="flex text-off_light my-2 font-body">
+						no jokes yet
+					</p>
 				</div>
 			);
 		}
@@ -63,31 +68,36 @@ export default function Home() {
 	const { write } = useContractWrite(config);
 
 	return (
-		<div className="flex w-full h-screen flex-col justify-center items-center">
-			<p className="text-off_light font-display text-lg mt-12 mb-2">
-				Home - Simple Ethereum Dapp
+		<div className="flex w-full h-screen flex-col justify-start items-center">
+			<div className="flex w-5/6 flex-row items-center justify-between my-12">
+				<p className="text-off_light font-display text-3xl font-extrabold">
+					Home - Simple Ethereum Dapp
+				</p>
+				<ConnectKitButton />
+			</div>
+			<div className="flex w-full flex-col items-center justify-center my-12">
+				<input
+					type="text"
+					id="joke"
+					name="new joke to be typed here"
+					minLength={3}
+					maxLength={100}
+					onChange={updateJokeTyped}
+					placeholder="new joke to be typed here"
+					className="flex h-10 w-3/5 bg-gray-800/25 text-md text-gray-200 placeholder:text-gray-600 font-body font-bold text-center rounded-xl"
+				/>
+				<button
+					// disabled={!write}
+					onClick={() => write?.()}
+					className="flex py-2 px-4 bg-green-500 my-4 rounded-full text-off_dark font-body font-bold "
+				>
+					tell joke
+				</button>
+			</div>
+			<p className="flex w-5/6 text-off_light font-display text-3xl font-extrabold my-6">
+				previously told jokes
 			</p>
-			<p className="text-off_light font-display text-xs my-12">
-				{address}
-			</p>
-			<input
-				type="text"
-				id="joke"
-				name="new joke to be typed here"
-				minLength={3}
-				maxLength={100}
-				onChange={updateJokeTyped}
-				className="flex h-10 w-3/5 bg-gray-800/25 text-md text-gray-500 font-body font-bold text-center rounded-xl"
-			/>
-			<button
-				// disabled={!write}
-				onClick={() => write?.()}
-				className="flex py-2 px-4 bg-green-500 my-4 rounded-full text-off_dark"
-			>
-				Tell Joke
-			</button>
 			<RenderOldJokes />
-			<ConnectKitButton />
 		</div>
 	);
 }

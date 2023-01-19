@@ -21,6 +21,16 @@ export default function Home() {
 					content="width=device-width, initial-scale=1"
 				/>
 				<link rel="icon" href="/favicon.ico" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link
+					rel="preconnect"
+					href="https://fonts.gstatic.com"
+					crossOrigin="true"
+				/>
+				<link
+					href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
+					rel="stylesheet"
+				></link>
 			</Head>
 			<main className="flex-col justify-center items-center flex-1 flex bg-dark">
 				<Main />
@@ -33,7 +43,7 @@ export default function Home() {
 				>
 					<FiGithub color="#DDDDDD" />
 				</a>
-				<p className="text-off_light font-display text-xs my-4">
+				<p className="text-off_light font-display text-xs my-4 font-regular">
 					Simple Ethereum Dapp
 				</p>
 			</div>
